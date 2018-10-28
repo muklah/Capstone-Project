@@ -10,6 +10,7 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.widget.TextView;
 
 import com.example.user_pc.capstonestage2.Adapters.FavoriteAdapter;
 import com.example.user_pc.capstonestage2.Database.AppDatabase;
@@ -18,13 +19,18 @@ import com.example.user_pc.capstonestage2.Database.Favorites;
 
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 import static android.support.v7.widget.DividerItemDecoration.VERTICAL;
 
 public class FavoriteActivity extends AppCompatActivity implements
         FavoriteAdapter.ItemClickListener{
 
-    private RecyclerView favoriteRecyclerView;
     private FavoriteAdapter favoriteAdapter;
+
+    @BindView(R.id.recyclerViewFavorites)
+    RecyclerView favoriteRecyclerView;
 
     private AppDatabase mDb;
 
@@ -33,7 +39,7 @@ public class FavoriteActivity extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favorite);
 
-        favoriteRecyclerView = findViewById(R.id.recyclerViewFavorites);
+        ButterKnife.bind(this);
 
         favoriteRecyclerView.setLayoutManager(new GridLayoutManager(this, 2));
 

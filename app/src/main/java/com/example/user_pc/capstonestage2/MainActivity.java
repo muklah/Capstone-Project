@@ -26,6 +26,8 @@ import com.example.user_pc.capstonestage2.Retrofit.ApiInterface;
 import com.example.user_pc.capstonestage2.Widget.UpdateService;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.firebase.analytics.FirebaseAnalytics;
+import com.google.firebase.crash.FirebaseCrash;
 
 import org.json.JSONObject;
 
@@ -43,6 +45,8 @@ public class MainActivity extends AppCompatActivity implements
         MainAdapter.MainAdapterOnClickHandler {
 
     private static final String TAG = MainActivity.class.getSimpleName();
+
+    private FirebaseAnalytics mFirebaseAnalytics;
 
     @BindView(R.id.search_edit_text)
     EditText searchEditText;
@@ -91,6 +95,8 @@ public class MainActivity extends AppCompatActivity implements
 
         ButterKnife.bind(this);
 
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -98,6 +104,7 @@ public class MainActivity extends AppCompatActivity implements
                 String searchQuery = searchEditText.getText().toString();
                 intent.putExtra("search", searchQuery);
                 startActivity(intent);
+                FirebaseCrash.report(new Exception("Something bad happened"));
             }
         });
 
@@ -167,37 +174,37 @@ public class MainActivity extends AppCompatActivity implements
 
                 for (Schedule mon : mondayList) {
                     schedulesBuilder.append(mon.getTitle() + "\n");
-                    scheduleListWidgets.add("Monday:" + "\n" + mon.getTitle() + "\n");
+                    scheduleListWidgets.add(getString(R.string.monday) + "\n" + mon.getTitle() + "\n");
                 }
 
                 for (Schedule tues : tuesdayList) {
                     schedulesBuilder.append(tues.getTitle() + "\n");
-                    scheduleListWidgets.add("Tuesday:" + "\n" + tues.getTitle() + "\n");
+                    scheduleListWidgets.add(getString(R.string.tuesday) + "\n" + tues.getTitle() + "\n");
                 }
 
                 for (Schedule wed : wednesdayList) {
                     schedulesBuilder.append(wed.getTitle() + "\n");
-                    scheduleListWidgets.add("Wednesday:" + "\n" + wed.getTitle() + "\n");
+                    scheduleListWidgets.add(getString(R.string.wednesday) + "\n" + wed.getTitle() + "\n");
                 }
 
                 for (Schedule thurs : thursdayList) {
                     schedulesBuilder.append(thurs.getTitle() + "\n");
-                    scheduleListWidgets.add("Thursday:" + "\n" + thurs.getTitle() + "\n");
+                    scheduleListWidgets.add(getString(R.string.thursday) + "\n" + thurs.getTitle() + "\n");
                 }
 
                 for (Schedule fri : fridayList) {
                     schedulesBuilder.append(fri.getTitle() + "\n");
-                    scheduleListWidgets.add("Friday:" + "\n" + fri.getTitle() + "\n");
+                    scheduleListWidgets.add(getString(R.string.friday) + "\n" + fri.getTitle() + "\n");
                 }
 
                 for (Schedule sat : saturdayList) {
                     schedulesBuilder.append(sat.getTitle() + "\n");
-                    scheduleListWidgets.add("Saturday:" + "\n" + sat.getTitle() + "\n");
+                    scheduleListWidgets.add(getString(R.string.saturday) + "\n" + sat.getTitle() + "\n");
                 }
 
                 for (Schedule sun : sundayList) {
                     schedulesBuilder.append(sun.getTitle() + "\n");
-                    scheduleListWidgets.add("Sunday:" + "\n" + sun.getTitle() + "\n");
+                    scheduleListWidgets.add(getString(R.string.sunday) + "\n" + sun.getTitle() + "\n");
                 }
 
                 UpdateService.startService(MainActivity.this, scheduleListWidgets);

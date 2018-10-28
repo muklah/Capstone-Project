@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'CS'
+            keyPassword '07703921191'
+            storeFile file('C:/Users/user-pc/AndroidStudioProjects/CapstoneStage2/cs.jks')
+            storePassword '07703921191'
+        }
+    }
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.example.user_pc.capstonestage2"
@@ -15,54 +23,48 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
         }
     }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     implementation 'com.android.support:design:28.0.0'
     implementation 'com.android.support:support-v4:28.0.0'
-
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-
     // Retrofit, Gson
     implementation 'com.google.code.gson:gson:2.6.2'
     implementation 'com.squareup.retrofit2:retrofit:2.0.2'
     implementation 'com.squareup.retrofit2:converter-gson:2.0.2'
-
     // RecyclerView
     implementation 'com.android.support:recyclerview-v7:28.0.0'
-
     // Picasso
     implementation 'com.squareup.picasso:picasso:2.71828'
-
     // CardView
     implementation 'com.android.support:cardview-v7:28.0.0'
-
     // ButterKnife
     implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
-
     // Firebase notification
     implementation 'com.google.firebase:firebase-core:11.8.0'
-    implementation 'com.google.firebase:firebase-messaging:11.8.0'
+
+    // Firebase Analytics
+    implementation 'com.google.firebase:firebase-core:11.8.0'
+    implementation 'com.google.firebase:firebase-crash:11.8.0'
 
     // Admob
     implementation 'com.google.android.gms:play-services-ads:11.8.0'
-
     // Room
-    implementation "android.arch.persistence.room:runtime:1.0.0"
+    implementation 'android.arch.persistence.room:runtime:1.0.0'
     annotationProcessor "android.arch.persistence.room:compiler:1.0.0"
-
     // LiveData
-    implementation "android.arch.lifecycle:extensions:1.1.0"
+    implementation 'android.arch.lifecycle:extensions:1.1.0'
     annotationProcessor "android.arch.lifecycle:compiler:1.1.0"
-
 }
 
 apply plugin: 'com.google.gms.google-services'

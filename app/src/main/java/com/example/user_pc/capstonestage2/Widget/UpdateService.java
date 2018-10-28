@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class UpdateService extends IntentService {
 
-    public static String SCHEDULES_LIST ="FROM_ACTIVITY_SCHEDULES_LIST";
+    public static String SCHEDULES_LIST = "FROM_ACTIVITY_SCHEDULES_LIST";
     public static final String UPDATE_WIDGETS = "android.appwidget.action.APPWIDGET_UPDATE";
 
     public UpdateService() {

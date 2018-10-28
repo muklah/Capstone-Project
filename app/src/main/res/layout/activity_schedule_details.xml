@@ -64,6 +64,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
                     android:textColor="@color/colorWhite"
                     android:textSize="24sp"
                     android:visibility="visible" />
@@ -99,6 +100,7 @@
                         android:id="@+id/saveButton"
                         style="@style/DetailsButton"
                         android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
                         android:nextFocusDown="@id/shareButton"
                         android:text="@string/favorite" />
 
@@ -106,6 +108,7 @@
                         android:id="@+id/shareButton"
                         style="@style/DetailsButton"
                         android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
                         android:nextFocusUp="@id/saveButton"
                         android:text="@string/share" />
 

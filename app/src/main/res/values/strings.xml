@@ -4,6 +4,8 @@
     <string name="search_hint">Search in Animes</string>
     <string name="search">Search</string>
 
+    <string name="schedule">Schedule</string>
+
     <string name="monday">Monday</string>
     <string name="tuesday">Tuesday</string>
     <string name="wednesday">Wednesday</string>
@@ -18,6 +20,8 @@
     <string name="share">Share</string>
     <string name="unfavorite">UnFavorite</string>
 
+    <string name="share_via">Share Via</string>
+
     <string name="score">Score</string>
     <string name="synopsis">Synopsis</string>
     <string name="type">Type</string>
@@ -29,5 +33,18 @@
 
     <string name="appwidget_text">EXAMPLE</string>
     <string name="add_widget">Add widget</string>
+
+    <string name="extra_favorite_id">extraFavoriteId</string>
+    <string name="instance_favorite_id">instanceFavoriteId</string>
+
+    <string name="text_plain">text/plain</string>
+
+    <string name="android_webkit">android.webkit.</string>
+
+    <string name="update_service">UpdateService</string>
+    <string name="from_activity_schedule_list">FROM_ACTIVITY_SCHEDULES_LIST</string>
+    <string name="android_appwidget_action_appwidget_update">android.appwidget.action.APPWIDGET_UPDATE</string>
+
+    <string name="base_url">https://api.jikan.moe/v3/</string>
 
 </resources>

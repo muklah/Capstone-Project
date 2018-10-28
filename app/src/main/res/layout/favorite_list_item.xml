@@ -29,6 +29,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingRight="16dp"
+                android:paddingEnd="16dp"
                 android:textColor="@color/colorWhite"
                 android:textSize="14sp"
                 android:textStyle="bold" />
@@ -37,7 +38,6 @@
                 android:id="@+id/score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="9.9"
                 android:textColor="@color/colorWhite"
                 android:textSize="10sp" />
 

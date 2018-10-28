@@ -187,7 +187,7 @@ public class ScheduleDetailsActivity extends AppCompatActivity {
         sharingIntent.setType("text/plain");
         String urlShare = mUrl;
         sharingIntent.putExtra(Intent.EXTRA_TEXT, urlShare);
-        startActivity(Intent.createChooser(sharingIntent, "Share via"));
+        startActivity(Intent.createChooser(sharingIntent, getString(R.string.share_via)));
     }
 
 }
