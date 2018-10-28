@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Otaku Jikan</string>
+
+    <string name="search_hint">Search in Animes</string>
+    <string name="search">Search</string>
+
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
+
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+
+    <string name="favorite">Favorite</string>
+    <string name="share">Share</string>
+    <string name="unfavorite">UnFavorite</string>
+
+    <string name="score">Score</string>
+    <string name="synopsis">Synopsis</string>
+    <string name="type">Type</string>
+    <string name="episodes">Episodes</string>
+
+    <string name="content_description">Poster of Anime</string>
+
+    <string name="error_message">Error Message</string>
+
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+
+</resources>
