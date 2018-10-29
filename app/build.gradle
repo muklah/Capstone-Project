@@ -5,7 +5,7 @@ android {
         config {
             keyAlias 'CS'
             keyPassword '07703921191'
-            storeFile file('C:/Users/user-pc/AndroidStudioProjects/CapstoneStage2/cs.jks')
+            storeFile file('../cs.jks')
             storePassword '07703921191'
         }
     }
@@ -50,13 +50,10 @@ dependencies {
     // ButterKnife
     implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
-    // Firebase notification
+    // Firebase
     implementation 'com.google.firebase:firebase-core:11.8.0'
-
     // Firebase Analytics
-    implementation 'com.google.firebase:firebase-core:11.8.0'
     implementation 'com.google.firebase:firebase-crash:11.8.0'
-
     // Admob
     implementation 'com.google.android.gms:play-services-ads:11.8.0'
     // Room
